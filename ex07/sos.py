@@ -1,5 +1,6 @@
 import sys
 
+
 NESTED_MORSE = {
     " ": "/",
     "A": ".-",
@@ -42,7 +43,8 @@ NESTED_MORSE = {
 
 
 def encode_to_morse(s):
-    assert isinstance(s, str) and all(c.isalnum() or c.isspace() for c in s), "the arguments are bad"
+    assert isinstance(s, str) and all(c.isalnum() or c.isspace() for c in s), \
+        "the arguments are bad"
     return ' '.join(NESTED_MORSE[c.upper()] for c in s)
 
 
